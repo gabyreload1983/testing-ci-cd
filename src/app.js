@@ -6,6 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/", (req, res) => res.send("<h1>HELLO CI-CD</h1>"));
 app.use("/api/testing", testingRouter);
 
 const PORT = process.env.PORT || 8080;
